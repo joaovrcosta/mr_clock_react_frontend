@@ -22,7 +22,7 @@ export default function Header() {
             className="w-full border border-black border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none"
             placeholder="Pesquise um relógio"
           />
-          <button className="bg-[#00418D] border border-black text-white px-8 rounded-r-md hover:bg-transparent hover:text-[#00418D] transition">
+          <button className="bg-[#001227] border border-black text-white px-8 rounded-r-md hover:bg-transparent hover:text-[#00418D] transition">
             Pesquisar
           </button>
         </div>
