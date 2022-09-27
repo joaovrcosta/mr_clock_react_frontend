@@ -20,28 +20,28 @@ export function Home() {
       <div className="max-w-[1535px] flex mx-auto pb-16 pt-16">
         <div className="w-10/12 grid grid-cols-3 gap-6 mx-auto justify-center">
           {/* sectionGrid */}
-          <div className="border border-blue-800 rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+          <div className="border border-blue-800 rounded-md px-3 py-6 flex justify-center items-center gap-5">
             <img src={freeFrete} alt="" className="w-12 h-12 object-contain" />
             <div>
-              <h4 className="font-medium capitalize text-lg">Frete Gratis</h4>
+              <h4 className="font-medium capitalize text-lg text-[#0f12ad]">Frete Gratis</h4>
               <p className="text-gray-500 text-sm">Acima de $200</p>
             </div>
           </div>
 
           {/* sectionGrid */}
-          <div className="border border-blue-800 rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+          <div className="border border-blue-800 rounded-md px-3 py-6 flex justify-center items-center gap-5">
             <img src={ConvenioIcon} alt="" className="w-12 h-12 object-contain" />
             <div>
-              <h4 className="font-medium capitalize text-lg">Convênio</h4>
+              <h4 className="font-medium capitalize text-lg text-[#0f12ad]">Convênio</h4>
               <p className="text-gray-500 text-sm">Plano de 6 meses</p>
             </div>
           </div>
 
           {/* sectionGrid */}
-          <div className="border border-blue-800 rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+          <div className="border border-blue-800 rounded-md px-3 py-6 flex justify-center items-center gap-5">
             <img src={qualityIcon} alt="" className="w-12 h-12 object-contain" />
             <div>
-              <h4 className="font-medium capitalize text-lg">Alta Qualidade</h4>
+              <h4 className="font-medium capitalize text-lg text-[#0f12ad]">Alta Qualidade</h4>
               <p className="text-gray-500 text-sm">Melhor qualidade do mercado</p>
             </div>
           </div>
