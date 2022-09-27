@@ -90,29 +90,19 @@ export function Home() {
               <div className="flex items-center">
                 <div className="flex gap-1 text-sm text-yellow-400">
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                 </div>
                 <div className="text-xs text-gray-500 ml-3">(150)</div>
@@ -159,29 +149,19 @@ export function Home() {
               <div className="flex items-center">
                 <div className="flex gap-1 text-sm text-yellow-400">
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                 </div>
                 <div className="text-xs text-gray-500 ml-3">(150)</div>
@@ -228,29 +208,19 @@ export function Home() {
               <div className="flex items-center">
                 <div className="flex gap-1 text-sm text-yellow-400">
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                 </div>
                 <div className="text-xs text-gray-500 ml-3">(150)</div>
@@ -297,29 +267,19 @@ export function Home() {
               <div className="flex items-center">
                 <div className="flex gap-1 text-sm text-yellow-400">
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                   <span>
-                    <i className="fas fa-star">
                       <img src={star} className="w-5 h-5" alt="" />
-                    </i>
                   </span>
                 </div>
                 <div className="text-xs text-gray-500 ml-3">(150)</div>

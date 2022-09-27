@@ -8,7 +8,7 @@ export default function Header() {
     <header className="py-2 shadow-sm bg-white">
       <div className="max-w-[1280px] flex items-center justify-between mx-auto">
         {/* logo */}
-        <a href="#">
+        <a href="/">
           <img src={logoImg} className="w-32" />
         </a>
 
