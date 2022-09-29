@@ -1,11 +1,14 @@
 import clockIcon from "../assets/1363176.png";
+import { useThemeContext } from "../hooks/useTheme";
 
-export default function Navbar() {
+export default function Navbar() {  
+  const { darkMode } = useThemeContext()
+
   return (
-    <nav className="bg-[#001227]">
+    <nav className={`${darkMode} bg-[#001227] dark:bg-[#3b3b43] transition`}>
       <div className="max-w-[1280px] flex mx-auto">
         {/* all category */}
-        <div className="px-8 py-4 bg-teal-600 flex items-center cursor-pointer relative group transition">
+        <div className="px-8 py-4 bg-teal-600 flex items-center cursor-pointer relative group transition dark:bg-[#6366f1]">
           <span className="text-white"></span>
           <span className="capitalize ml-2 text-white hover:text-slate-900">
             All Categories

@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export default function AcessibilidadeBar() {
   return (
-    <div className="bg-[#001227]">
+    <div className="py-2 shadow-sm bg-[#1a1d24]">
       <div className="max-w-[1280px] flex mx-auto ">
         <div className="space-x-4">
           <a href="#" className="text-white">
@@ -20,9 +22,11 @@ export default function AcessibilidadeBar() {
           <a href="#" className="text-white">
             A-
           </a>
-          <a href="#" className="text-white">
-            Acessiblidade
-          </a>
+          <Link to="/acessibilidade">
+            <a href="" className="text-white">
+              Acessiblidade
+            </a>
+          </Link>
         </div>
       </div>
     </div>

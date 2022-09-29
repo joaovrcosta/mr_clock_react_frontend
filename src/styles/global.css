@@ -1,4 +1,26 @@
 @import url("https://rsms.me/inter/inter.css");
+
+:root {
+    --accent: #fff;
+    --content: #fdff;
+    --background: #fff;
+    --foreground: #222;
+    --edge: #fff
+}
+
+.theme-dark {
+    --accent: #00f0
+    --content: #000;
+    --background: #000;
+    --foreground: #222;
+    --edge: #223
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html {
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
