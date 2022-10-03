@@ -1,7 +1,7 @@
 export default function ConsultProduct() {
   return (
-    <div className="max-w-[1280px mx-auto bg-gray-200">
-    <div class="text-gray-900 bg-gray-200 ">
+    <div className="max-w-[1280px mx-auto bg-white">
+    <div class="text-gray-900 bg-white ">
     <div class="p-6 px-12 flex">
         <h1 class="text-3xl">
             Produtos
