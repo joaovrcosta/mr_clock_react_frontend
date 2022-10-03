@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logoImg from "../assets/logo_em_svg.svg";
+import logoImg from "../assets/logo-mr.svg";
 import { useThemeContext } from "../hooks/useTheme";
 import Navbar from "./Navbar";
+import ConvenioIcon from "../assets/Shopping-basket.svg";
 
 export default function Header() {
   const { setDarkMode, theme, setTheme, darkMode } = useThemeContext();
@@ -17,12 +18,12 @@ export default function Header() {
   return (
     // header
     <div className={`${darkMode}`}>
-      <header className="py-2 shadow-sm bg-white dark:bg-[#111827] transition">
+      <header className="py-2 px-6 shadow-sm bg-white dark:bg-[#111827] transition">
         <div className="max-w-[1280px] flex items-center justify-between mx-auto">
           {/* logo */}
           <Link to="/">
             <a href="">
-              <img src={logoImg} className="w-32" />
+              <img src={logoImg} className="w-20 h-20" />
             </a>
           </Link>
 
@@ -70,7 +71,7 @@ export default function Header() {
               type="text"
               id="search-navbar"
               class="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Search..."
+              placeholder="Pesquisar..."
             />
           </div>
           {/* icons */}
@@ -80,10 +81,10 @@ export default function Header() {
               className="text-center text-gray-700 hover:text-red-700 transition relative"
             >
               <div className="text-2xl">
-                <i className="far fa-heart"></i>
+                <img src={ConvenioIcon} alt="" />
               </div>
-              <div className="text-xs leading-3">Wish List</div>
-              <span className="absolute right-0 top-1 w-5 h-5 rounded-full flex items-center justify-center bg-red-800 text-white text-xs">
+              <div className="text-xs leading-3">Cesta</div>
+              <span className="absolute right-0 top-1 w-5 h-5 rounded-full flex items-center justify-center bg-[#6366f1] text-white text-xs">
                 8
               </span>
             </a>
@@ -93,10 +94,10 @@ export default function Header() {
             name=""
             id=""
             value={darkMode}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg p-3.5"
+            className="bg-gray-50 border border-gray-300 text-gray-500 text-base rounded-lg p-3.5 dark:text-white dark:bg-gray-700 dark:border-gray-600 hover:cursor-pointer"
           >
-            <option value="">Light</option>
-            <option value="dark">Dark</option>
+            <option value="">Claro</option>
+            <option value="dark">Escuro</option>
           </select>
         </div>
       </header>

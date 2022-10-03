@@ -4,7 +4,7 @@ export default function ConsultProduct() {
     <div class="text-gray-900 bg-white ">
     <div class="p-6 px-12 flex">
         <h1 class="text-3xl">
-            Produtos
+            Consulta de Produtos
         </h1>
     </div>
     <div class="px-12 flex justify-center">

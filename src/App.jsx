@@ -9,6 +9,9 @@ import AcessibilidadeBar from "./components/AcessibilidadeBar";
 import ThemeProvider from "./hooks/useTheme";
 import RegisterProduct from "./pages/cadastrarProduto";
 import ConsultProduct from "./pages/consultarProduto";
+import ConsultRequest from "./pages/consultarPedido";
+import ConsultUser from "./pages/consultarCliente";
+import ConvenioPage from "./pages/convenio";
 
 function App() {
   return (
@@ -20,8 +23,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/acessibilidade" element={<Acessibilidade />} />
-          <Route path="/register" element={<RegisterProduct />} />
+          <Route path="/add-product" element={<RegisterProduct />} />
           <Route path="/consult-product" element={<ConsultProduct />} />
+          <Route path="/consult-request" element={<ConsultRequest />} />
+          <Route path="/consult-user" element={<ConsultUser />} />
+          <Route path="/medical-insurance" element={<ConvenioPage />} />
         </Routes>
         <Footer />
       </ThemeProvider>
