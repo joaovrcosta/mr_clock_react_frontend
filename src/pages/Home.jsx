@@ -17,15 +17,15 @@ export function Home() {
 
   return (
     <main className={`${darkMode}`}>
-      <div className="bg-white dark:bg-[#1a1d24]">
+      <div className="bg-white dark:bg-[#111827]">
         <Banner />
         {/* feature section */}
         <div
-          className={`max-w-[1535px] flex mx-auto pb-16 pt-16 bg-white dark:bg-[#1a1d24] `}
+          className={`max-w-[1535px] flex mx-auto pb-16 pt-16 bg-white dark:bg-[#111827] `}
         >
-          <div className="w-10/12 grid grid-cols-3 gap-6 mx-auto justify-center">
+          <div className="w-10/12 grid grid-cols-1 gap-6 mx-auto justify-center sm:grid-cols-3">
             {/* sectionGrid */}
-            <div className="border border-[#6366f1] rounded-md px-3 py-6 flex justify-center items-center gap-5 bg-white dark:bg-[#1a1d24] ">
+            <div className="border border-[#6366f1] rounded-md px-3 py-6 flex justify-center items-center gap-5 bg-white dark:bg-[#111827]">
               <img
                 src={freeFrete}
                 alt=""
@@ -80,7 +80,7 @@ export function Home() {
         </h2> */}
 
           {/* product grid */}
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
             {/* single product */}
             <div className="bg-white shadow rounded overflow-hidden group">
               {/* product image */}
@@ -327,7 +327,7 @@ export function Home() {
         </h2> */}
 
           {/* product grid */}
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
             {/* single product */}
             <div className="bg-white shadow rounded overflow-hidden group">
               {/* product image */}
