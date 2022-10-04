@@ -1,5 +1,6 @@
 import { useThemeContext } from "../hooks/useTheme";
 import logoImg from "../assets/logo-mr.svg";
+import w3c from '../assets/selo-html5.png'
 
 export default function Footer() {
   const { darkMode } = useThemeContext();
@@ -168,6 +169,9 @@ export default function Footer() {
                 />
               </svg>
               <span class="sr-only">Dribbbel account</span>
+            </a>
+            <a href="https://www.w3c.br/">
+            <img src={w3c} alt="" class="h-8 w-15 cursor-pointer"/>
             </a>
           </div>
         </div>

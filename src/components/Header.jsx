@@ -18,7 +18,7 @@ export default function Header() {
   return (
     // header
     <div className={`${darkMode}`}>
-      <header className="py-2 px-6 shadow-sm bg-white dark:bg-[#111827] transition fixed sticky w-full z-50 top-0">
+      <header id="cabecario" className="py-2 px-6 shadow-sm bg-white dark:bg-[#111827] transition sticky w-full z-50 top-0">
         <div className="max-w-[1280px] flex items-center justify-between mx-auto">
           {/* logo */}
           <Link to="/">

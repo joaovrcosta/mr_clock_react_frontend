@@ -43,7 +43,7 @@ export function Home() {
             {/* sectionGrid */}
             {/* <Link to="/medical-insurance"> */}
             <a href="">
-            <div className="border border-[#6366f1] rounded-md px-3 py-6 flex justify-center items-center gap-5 hover:border-[#2863d2] hover:bg-gray-100 cursor-pointer">
+            <div className="border border-[#6366f1] rounded-md px-3 py-6 flex justify-center items-center gap-5 bg-white dark:bg-[#111827] hover:border-[#2863d2] hover:bg-gray-100 cursor-pointer">
               <img
                 src={ConvenioIcon}
                 alt=""
@@ -60,7 +60,7 @@ export function Home() {
             {/* </Link> */}
 
             {/* sectionGrid */}
-            <div className="border border-[#6366f1] rounded-md px-3 py-6 flex justify-center items-center gap-5 hover:border-[#2863d2] hover:bg-gray-100 cursor-pointer">
+            <div className="border border-[#6366f1] rounded-md px-3 py-6 flex justify-center items-center gap-5 bg-white dark:bg-[#111827] hover:border-[#2863d2] hover:bg-gray-100 cursor-pointer">
               <img
                 src={qualityIcon}
                 alt=""
