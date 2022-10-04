@@ -18,7 +18,7 @@ export default function Header() {
   return (
     // header
     <div className={`${darkMode}`}>
-      <header id="cabecario" className="py-2 px-6 shadow-sm bg-white dark:bg-[#111827] transition sticky w-full z-50 top-0">
+      <header id="cabecario" className="py-2 px-6 shadow-sm bg-white dark:bg-[#000000] transition sticky w-full z-50 top-0">
         <div className="max-w-[1280px] flex items-center justify-between mx-auto">
           {/* logo */}
           <Link to="/">
@@ -84,7 +84,7 @@ export default function Header() {
               <div className="text-2xl">
                 <img src={ConvenioIcon} alt="" />
               </div>
-              <div className="text-xs leading-3">Cesta</div>
+              <div className="text-xs leading-3 dark:text-white">Cesta</div>
               <span className="absolute right-0 top-1 w-5 h-5 rounded-full flex items-center justify-center bg-[#6366f1] text-white text-xs">
                 0
               </span>

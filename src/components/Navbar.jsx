@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav class="bg-white border border-b-1 border-gray-200 dark:border-gray-600 dark:bg-[#111827] px-8">
+      <nav class="bg-white border border-b-1 border-gray-200 dark:border-gray-600 dark:bg-[#000000] px-8">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
         <div className="px-8 py-4 bg-[#001227] hover:bg-[#001227f1] text-black flex items-center cursor-pointer rounded-xl relative group transition dark:bg-[#6366f1] dark:hover:text-white">
           <span className="text-white"></span>
@@ -25,7 +25,7 @@ export default function Navbar() {
               className="flex items-center px-6 py-3 hover:bg-gray-100 transition"
             >
               <img src={stack} className="w-5 h-5 object-contain" alt="" />
-              <span className="ml-6 text-gray-600 text-sm">Administrar Pedidos</span>
+              <span className="ml-6 text-gray-600 text-sm dark:text-yellow-500">Administrar Pedidos</span>
             </a>
             </Link>
             <Link to="/consult-user">
@@ -86,7 +86,7 @@ export default function Navbar() {
                 <Link to="/consult-request">
                 <a
                   href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 dark:text-white md:dark:hover:text-yellow-400 dark:hover:bg-gray-700 dark:hover:text-yellow-400 md:dark:hover:bg-transparent dark:border-gray-700"
                   aria-current="page"
                 >
                   Administrar Pedidos
@@ -97,7 +97,7 @@ export default function Navbar() {
                 <Link to="/consult-user">
                 <a
                   href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 dark:text-white md:dark:hover:text-yellow-400 dark:hover:bg-gray-700 dark:hover:text-yellow-400 md:dark:hover:bg-transparent dark:border-gray-700"
                   aria-current="page"
                 >
                   Administrar Clientes
@@ -108,7 +108,7 @@ export default function Navbar() {
                 <Link to="add-product">
                 <a
                   href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 dark:text-white md:dark:hover:text-yellow-400 dark:hover:bg-gray-700 dark:hover:text-yellow-400 md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Adicionar Produto
                 </a>
@@ -117,7 +117,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 dark:text-white md:dark:hover:text-yellow-400 dark:hover:bg-gray-700 dark:hover:text-yellow-400 md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Configurações
                 </a>
@@ -125,7 +125,7 @@ export default function Navbar() {
               <li>
                 <a
                   href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                  class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-400 md:p-0 dark:text-white md:dark:hover:text-yellow-400 dark:hover:bg-gray-700 dark:hover:text-yellow-400 md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Contato
                 </a>
