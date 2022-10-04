@@ -85,7 +85,7 @@ export function Home() {
         </h2> */}
 
           {/* product grid */}
-          <div className="grid px-8 grid-cols-1 gap-6 md:grid-cols-4 sm:grid-cols-2 ">
+          <div id="products" className="grid px-8 grid-cols-1 gap-6 md:grid-cols-4 sm:grid-cols-2 ">
             {/* single product */}
             <div className="bg-gray-100 shadow rounded overflow-hidden group dark:bg-[#142136]">
               {/* product image */}

@@ -12,6 +12,7 @@ import ConsultProduct from "./pages/consultarProduto";
 import ConsultRequest from "./pages/consultarPedido";
 import ConsultUser from "./pages/consultarCliente";
 import ConvenioPage from "./pages/convenio";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/consult-request" element={<ConsultRequest />} />
           <Route path="/consult-user" element={<ConsultUser />} />
           <Route path="/medical-insurance" element={<ConvenioPage />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </ThemeProvider>

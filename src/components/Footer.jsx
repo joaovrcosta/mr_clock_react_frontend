@@ -5,7 +5,7 @@ export default function Footer() {
   const { darkMode } = useThemeContext();
 
   return (
-    <div className={`${darkMode}`}>
+    <div id="rodape" className={`${darkMode}`}>
       <footer className="p-4 bg-white sm:p-6 max-w-[1280px] mx-auto">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">

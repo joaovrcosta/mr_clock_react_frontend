@@ -8,10 +8,10 @@ export default function AcessibilidadeBar() {
           <a href="#" className="text-white">
             Ir para o menu [1]
           </a>
-          <a href="#" className="text-white">
+          <a href="#products" className="text-white">
             Ir para o conteúdo [2]
           </a>
-          <a href="#" className="text-white">
+          <a href="#rodape" className="text-white">
             Ir para o rodapé [3]
           </a>
         </div>

@@ -2,8 +2,8 @@ import React from "react";
 
 export function Acessibilidade() {
   return (
-    <div className="flex items-center justify-center">
-      <h1 className="text-red-700 text-2xl font-bold">ACESSIBILIDADE</h1>
+    <div>
+      <h1>ACESSIBILIDADE</h1>
       <p>
         {" "}
         Este site foi desenvolvido para que pessoas com deficiência visual,

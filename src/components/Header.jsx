@@ -18,7 +18,7 @@ export default function Header() {
   return (
     // header
     <div className={`${darkMode}`}>
-      <header className="py-2 px-6 shadow-sm bg-white dark:bg-[#111827] transition">
+      <header className="py-2 px-6 shadow-sm bg-white dark:bg-[#111827] transition fixed sticky w-full z-50 top-0">
         <div className="max-w-[1280px] flex items-center justify-between mx-auto">
           {/* logo */}
           <Link to="/">
@@ -75,6 +75,7 @@ export default function Header() {
             />
           </div>
           {/* icons */}
+          <Link to="/cart">
           <div className="flex items-center space-x-4">
             <a
               href="#"
@@ -85,10 +86,11 @@ export default function Header() {
               </div>
               <div className="text-xs leading-3">Cesta</div>
               <span className="absolute right-0 top-1 w-5 h-5 rounded-full flex items-center justify-center bg-[#6366f1] text-white text-xs">
-                8
+                0
               </span>
             </a>
           </div>
+          </Link>
           <select
             onChange={onHandleThemeChange}
             name=""
