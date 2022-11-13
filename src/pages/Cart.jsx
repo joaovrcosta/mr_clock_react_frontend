@@ -1,4 +1,10 @@
+import { useContext, useEffect, useState } from "react";
+import { UseCart } from "../hooks/useCart";
+
+
 export default function Cart() {
+  const { cart, handleSetTotal, total, removeProduct, handleProductIncrement, handleProductDecrement } = useContext(UseCart);
+
   return (
     <div className="max-w-[1280px] flex mx-auto mt-6 px-6">
       <div className="p-12 bg-[#6365f144] w-full mb-6 rounded-lg border border-dashed border-blue-300 cursor-pointer hover:shadow-xl transition">
