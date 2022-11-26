@@ -18,7 +18,10 @@ export default function Header() {
   return (
     // header
     <div className={`${darkMode}`}>
-      <header id="cabecario" className="py-2 px-6 shadow-sm bg-white dark:bg-[#000000] transition sticky w-full z-50 top-0">
+      <header
+        id="cabecario"
+        className="py-2 px-6 shadow-sm bg-white dark:bg-[#000000] transition sticky w-full z-50 top-0"
+      >
         <div className="max-w-[1280px] flex items-center justify-between mx-auto">
           {/* logo */}
           <Link to="/">
@@ -76,20 +79,25 @@ export default function Header() {
           </div>
           {/* icons */}
           <Link to="/cart">
-          <div className="flex items-center space-x-4">
-            <a
-              href="#"
-              className="text-center text-gray-700 hover:text-red-700 transition relative"
-            >
-              <div className="text-2xl">
-                <img src={ConvenioIcon} alt="" />
-              </div>
-              <div className="text-xs leading-3 dark:text-white">Cesta</div>
-              <span className="absolute right-0 top-1 w-5 h-5 rounded-full flex items-center justify-center bg-[#6366f1] text-white text-xs">
-                0
-              </span>
-            </a>
-          </div>
+            <div className="flex items-center space-x-4">
+              <a
+                href="#"
+                className="text-center text-gray-700 hover:text-red-700 transition relative"
+              >
+                <div className="text-2xl">
+                  <img src={ConvenioIcon} alt="" />
+                </div>
+                <div className="text-xs leading-3 dark:text-white">Cesta</div>
+                <span className="absolute right-0 top-1 w-5 h-5 rounded-full flex items-center justify-center bg-[#6366f1] text-white text-xs">
+                  0
+                </span>
+              </a>
+            </div>
+          </Link>
+          <Link to="/login">
+            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+              Login/Registrar
+            </button>
           </Link>
           <select
             onChange={onHandleThemeChange}
