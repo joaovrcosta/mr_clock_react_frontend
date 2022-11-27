@@ -75,16 +75,24 @@ export default function RegisterProduct() {
             </div>
           </div>
           <div>
-            <Link to="/consult-product">
+            <div className="flex items-center justify-center">
               <a href="">
                 <button
                   type="button"
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  class="text-white bg-[#142136] hover:bg-[#28436f] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Cadastrar Produto
+                </button>
+              </a>
+              <Link to="/consult-product">
+                <button
+                  type="button"
+                  class="text-white bg-[#cd9621] hover:bg-[#b98514] focus:outline-none focus:ring-4 focus:ring-[#ffd780]  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-[#b98514] "
                 >
                   Consultar Produtos
                 </button>
-              </a>
-            </Link>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

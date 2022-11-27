@@ -15,7 +15,7 @@ export default function AcessibilidadeBar() {
             Ir para o rodapé [3]
           </a>
         </div>
-        <div className="space-x-8 text-right ">
+        <div className="space-x-8 text-right ml-8">
           <Link to="/acessibilidade">
             <a href="" className="text-white">
               Acessiblidade

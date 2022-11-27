@@ -1,32 +1,33 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebase-config";
+import { UserAuth } from "../hooks/useAuth";
 
 export function SignUp() {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const register = async () => {
-    event.preventDefault();
+  const navigate = useNavigate();
+
+  const { createUser } = UserAuth();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
     try {
-      const user = await createUserWithEmailAndPassword(
-        auth,
-        registerEmail,
-        registerPassword
-      );
-      console.log(user);
-    } catch (error) {
-      console.error(error.message);
+      await createUser(registerEmail, registerPassword);
+      navigate("/");
+    } catch (e) {
+      setError(e.message);
+      console.log(e.message);
     }
-
-    setRegisterEmail(" ");
-    registerPassword(" ");
   };
 
   return (
     <div className="max-w-[1280px] flex items-center justify-center mx-auto mt-12">
-      <form onSubmit={register}>
+      <form onSubmit={handleSubmit}>
         <div className="mb-6">
           <label
             for="email"

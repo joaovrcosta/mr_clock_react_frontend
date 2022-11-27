@@ -4,8 +4,10 @@ import logoImg from "../assets/logo-mr.svg";
 import { useThemeContext } from "../hooks/useTheme";
 import Navbar from "./Navbar";
 import ConvenioIcon from "../assets/Shopping-basket.svg";
+import { UserAuth } from "../hooks/useAuth";
 
 export default function Header() {
+  const { user, logout } = UserAuth();
   const { setDarkMode, theme, setTheme, darkMode } = useThemeContext();
 
   const onHandleThemeChange = (event) => {
@@ -101,6 +103,7 @@ export default function Header() {
           </Link>
           <select
             onChange={onHandleThemeChange}
+            selected
             name=""
             id=""
             value={darkMode}

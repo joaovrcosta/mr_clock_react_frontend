@@ -14,27 +14,30 @@ import ConsultUser from "./pages/consultarCliente";
 import ConvenioPage from "./pages/convenio";
 import Cart from "./pages/Cart";
 import { SignUp } from "./pages/SignUp";
+import { AuthContextProvider } from "./hooks/useAuth";
 
 function App() {
   return (
     <>
-      <ThemeProvider>
-        <AcessibilidadeBar />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/acessibilidade" element={<Acessibilidade />} />
-          <Route path="/add-product" element={<RegisterProduct />} />
-          <Route path="/consult-product" element={<ConsultProduct />} />
-          <Route path="/consult-request" element={<ConsultRequest />} />
-          <Route path="/consult-user" element={<ConsultUser />} />
-          <Route path="/medical-insurance" element={<ConvenioPage />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/signup" element={<SignUp />} />
-        </Routes>
-        <Footer />
-      </ThemeProvider>
+      <AuthContextProvider>
+        <ThemeProvider>
+          <AcessibilidadeBar />
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/acessibilidade" element={<Acessibilidade />} />
+            <Route path="/add-product" element={<RegisterProduct />} />
+            <Route path="/consult-product" element={<ConsultProduct />} />
+            <Route path="/consult-request" element={<ConsultRequest />} />
+            <Route path="/consult-user" element={<ConsultUser />} />
+            <Route path="/medical-insurance" element={<ConvenioPage />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Routes>
+          <Footer />
+        </ThemeProvider>
+      </AuthContextProvider>
     </>
   );
 }
