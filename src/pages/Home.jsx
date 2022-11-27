@@ -12,9 +12,23 @@ import qualityIcon from "../assets/Fire.png";
 import star from "../assets/star-icon.webp";
 import { useThemeContext } from "../hooks/useTheme";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { db } from "../firebase/firebase-config";
+import { collection, getDocs } from "firebase/firestore";
 
 export function Home() {
   const { darkMode } = useThemeContext();
+
+  const [products, setProducts] = useState([]);
+  const productsCollectionRef = collection(db, "products");
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await getDocs(productsCollectionRef);
+      setProducts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getUsers();
+  }, []);
 
   return (
     <main className={`${darkMode}`}>
@@ -91,74 +105,87 @@ export function Home() {
           {/* product grid */}
           <div
             id="products"
-            className="grid px-8 grid-cols-1 gap-6 md:grid-cols-4 sm:grid-cols-2 "
+            className="grid px-8 grid-cols-1 gap-6 md:grid-cols-4 sm:grid-cols-2  w-full "
           >
             {/* single product */}
-            <div className="bg-gray-100 shadow rounded overflow-hidden group dark:bg-[#142136]">
-              {/* product image */}
-              <div className="relative ">
-                <img src={clockOne} alt="" className="w-full" />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition cursor-pointer">
-                  <a
-                    href="#"
-                    className="text-white text-lg w-9 h-8 rounded-full bg-[#6366f1] flex items-center justify-center hover:bg-[#474ae5] transition"
-                  >
-                    <i className="fas fa-search"></i>
-                  </a>
-                  <a
-                    href="#"
-                    className="text-white text-lg w-9 h-8 rounded-full bg-[#6366f1] flex items-center justify-center hover:bg-gray-800 transition"
-                  >
-                    <i className="fas fa-heart"></i>
-                  </a>
-                </div>
-              </div>
-              {/* product content */}
-              <div className="pt-4 pb-3 px-4">
-                <a href="#">
-                  <h4 className="uppercase text-base mb-2 text-gray-800 font-bold dark:text-white">
-                    Relógio SmartWatch W34
-                  </h4>
-                </a>
-                <div className="flex items-baseline mb-1 space-x-2">
-                  <p className="text-xl font-semibold text-[#46ac33]">
-                    R$45,00
-                  </p>
-                  <p className="text-sm text-gray-400 line-through">R$55,00</p>
-                </div>
-                <div className="flex items-center">
-                  <div className="flex gap-1 text-sm text-yellow-400">
-                    <span>
-                      <img src={star} className="w-5 h-5" alt="" />
-                    </span>
-                    <span>
-                      <img src={star} className="w-5 h-5" alt="" />
-                    </span>
-                    <span>
-                      <img src={star} className="w-5 h-5" alt="" />
-                    </span>
-                    <span>
-                      <img src={star} className="w-5 h-5" alt="" />
-                    </span>
-                    <span>
-                      <img src={star} className="w-5 h-5" alt="" />
-                    </span>
+            {products.map((product) => {
+              return (
+                <div className="bg-gray-100 shadow rounded overflow-hidden group dark:bg-[#142136]">
+                  {/* product image */}
+                  <div className="relative bg-white">
+                    <img
+                      src={product.image}
+                      alt=""
+                      className="w-full h-60 object-contain"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition cursor-pointer">
+                      <a
+                        href="#"
+                        className="text-white text-lg w-9 h-8 rounded-full bg-[#6366f1] flex items-center justify-center hover:bg-[#474ae5] transition"
+                      >
+                        <i className="fas fa-search"></i>
+                      </a>
+                      <a
+                        href="#"
+                        className="text-white text-lg w-9 h-8 rounded-full bg-[#6366f1] flex items-center justify-center hover:bg-gray-800 transition"
+                      >
+                        <i className="fas fa-heart"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div className="text-xs text-gray-500 ml-3 dark:text-white">
-                    (150)
+                  {/* product content */}
+                  <div className="">
+                    <div className="pt-4 pb-3 px-4">
+                      <a href="#">
+                        <h4 className="uppercase text-base mb-2 text-gray-800 font-bold dark:text-white truncate">
+                          {product.name}
+                        </h4>
+                      </a>
+                      <div className="flex items-baseline mb-1 space-x-2">
+                        <p className="text-xl font-semibold text-[#46ac33]">
+                          R${product.price}
+                        </p>
+                        <p className="text-sm text-gray-400 line-through">
+                          R$55,00
+                        </p>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="flex gap-1 text-sm text-yellow-400">
+                          <span>
+                            <img src={star} className="w-5 h-5" alt="" />
+                          </span>
+                          <span>
+                            <img src={star} className="w-5 h-5" alt="" />
+                          </span>
+                          <span>
+                            <img src={star} className="w-5 h-5" alt="" />
+                          </span>
+                          <span>
+                            <img src={star} className="w-5 h-5" alt="" />
+                          </span>
+                          <span>
+                            <img src={star} className="w-5 h-5" alt="" />
+                          </span>
+                        </div>
+                        <div className="text-xs text-gray-500 ml-3 dark:text-white">
+                          (150)
+                        </div>
+                      </div>
+                    </div>
+                    <a
+                      href="#"
+                      className="block w-full py-2 text-center text-white border border-[#001227] bg-[#001227] roundeed-b hover:bg-transparent hover:text-black dark:bg-orange-500 rounded-md"
+                    >
+                      Add to cart
+                    </a>
                   </div>
                 </div>
-              </div>
-              <a
-                href="#"
-                className="block w-full py-2 text-center text-white border border-[#001227] bg-[#001227] roundeed-b hover:bg-transparent hover:text-black dark:bg-orange-500 rounded-md"
-              >
-                Add to cart
-              </a>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>
+      ;
     </main>
   );
 }
