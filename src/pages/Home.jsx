@@ -22,6 +22,11 @@ export function Home() {
   const [products, setProducts] = useState([]);
   const productsCollectionRef = collection(db, "products");
 
+  const formatValue = new Intl.NumberFormat("pt-br", {
+    style: "currency",
+    currency: "BRL",
+  });
+
   useEffect(() => {
     const getUsers = async () => {
       const data = await getDocs(productsCollectionRef);
@@ -116,7 +121,7 @@ export function Home() {
                     <img
                       src={product.image}
                       alt=""
-                      className="w-full h-60 object-contain"
+                      className="w-full h-60 object-contain p-6"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition cursor-pointer">
                       <a
@@ -143,7 +148,7 @@ export function Home() {
                       </a>
                       <div className="flex items-baseline mb-1 space-x-2">
                         <p className="text-xl font-semibold text-[#46ac33]">
-                          R${product.price}
+                          {formatValue.format(product.price)}
                         </p>
                         <p className="text-sm text-gray-400 line-through">
                           R$55,00

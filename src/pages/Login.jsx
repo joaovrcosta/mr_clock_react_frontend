@@ -22,7 +22,7 @@ export function Login() {
   };
 
   return (
-    <div className="max-w-[1280px] flex items-center justify-center mx-auto mt-12">
+    <div className="max-w-[1280px] flex items-center justify-center mx-auto mt-12 mb-20">
       <form onSubmit={login}>
         <div class="mb-6">
           <label
@@ -38,7 +38,7 @@ export function Login() {
             type="email"
             id="email"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="name@flowbite.com"
+            placeholder="name@email.com"
             required
           />
         </div>
@@ -60,14 +60,18 @@ export function Login() {
           />
         </div>
         <div class="flex items-start mb-6">
-          <Link to="/signup">
-            <label
-              for="remember"
-              class="text-sm font-medium  dark:text-gray-300 text-sky-600 cursor-pointer hover:text-decoration-line: underline"
-            >
-              Criar conta
-            </label>
-          </Link>
+          <label
+            for="remember"
+            class="text-sm font-light dark:text-gray-300 text-[#000000] cursor-pointer"
+          >
+            Novo por aqui?{" "}
+            <Link to="/signup">
+              {" "}
+              <strong className="text-blue-500 hover:underline">
+                Criar conta
+              </strong>
+            </Link>
+          </label>
         </div>
         <button
           type="submit"

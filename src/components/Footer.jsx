@@ -1,6 +1,6 @@
 import { useThemeContext } from "../hooks/useTheme";
 import logoImg from "../assets/logo-mr.svg";
-import w3c from '../assets/selo-html5.png'
+import w3c from "../assets/selo-html5.png";
 
 export default function Footer() {
   const { darkMode } = useThemeContext();
@@ -34,13 +34,14 @@ export default function Footer() {
             </div>
             <div>
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Follow us
+                Nos Siga
               </h2>
               <ul class="text-gray-600 dark:text-gray-400">
                 <li class="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
+                    href="https://github.com/joaovrcosta/mr_clock_react_frontend"
                     class="hover:underline "
+                    target="_blank"
                   >
                     Github
                   </a>
@@ -62,12 +63,12 @@ export default function Footer() {
               <ul class="text-gray-600 dark:text-gray-400">
                 <li class="mb-4">
                   <a href="#" class="hover:underline">
-                    Privacy Policy
+                    Politica de Privacidade
                   </a>
                 </li>
                 <li>
                   <a href="#" class="hover:underline">
-                    Terms &amp; Conditions
+                    Termos e Condições
                   </a>
                 </li>
               </ul>
@@ -78,10 +79,13 @@ export default function Footer() {
         <div class="sm:flex sm:items-center sm:justify-between">
           <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2022{" "}
-            <a href="https://flowbite.com/" class="hover:underline">
+            <a
+              href="https://github.com/joaovrcosta/mr_clock_react_frontend"
+              class="hover:underline"
+            >
               Mr.Clock™
             </a>
-            . All Rights Reserved.
+            . Todos direitos reservados
           </span>
           <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a
@@ -170,8 +174,8 @@ export default function Footer() {
               </svg>
               <span class="sr-only">Dribbbel account</span>
             </a>
-            <a href="https://www.w3c.br/">
-            <img src={w3c} alt="" class="h-8 w-15 cursor-pointer"/>
+            <a href="https://www.w3c.br/" target="_blank">
+              <img src={w3c} alt="" class="h-8 w-15 cursor-pointer" />
             </a>
           </div>
         </div>

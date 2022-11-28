@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase/firebase-config";
 
@@ -9,6 +9,8 @@ export default function RegisterProduct() {
   const [productPrice, setProductPrice] = useState(0);
   const [productImage, setProductImage] = useState("");
   const [error, setError] = useState(false);
+
+  const navigate = useNavigate();
 
   const types = ["image/png", "image/jpeg"];
 
@@ -35,6 +37,7 @@ export default function RegisterProduct() {
         price: productPrice,
         image: productImage,
       });
+      navigate("/");
     } catch (error) {
       console.log(error.message);
     }
@@ -63,6 +66,7 @@ export default function RegisterProduct() {
                 className="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-900"
                 type="text"
                 placeholder="Digite o nome"
+                required
               />
 
               <label className="text-gray-600 font-light" htmlFor="">
@@ -73,6 +77,7 @@ export default function RegisterProduct() {
                 className="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-900"
                 type="text"
                 placeholder="Digite a quantidade"
+                required
               />
 
               <label className="text-gray-600 font-light" htmlFor="">
@@ -83,6 +88,7 @@ export default function RegisterProduct() {
                 className="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-900"
                 type="text"
                 placeholder="Digite o preço"
+                required
               />
               <label className="text-gray-600 font-light" htmlFor="">
                 Imagem do Produ
@@ -92,6 +98,7 @@ export default function RegisterProduct() {
                 className="w-full mt-2 mb-6 px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:border-blue-900"
                 type="text"
                 placeholder="Cole o Link da Imagem"
+                required
               />
             </div>
             <div>
@@ -105,12 +112,12 @@ export default function RegisterProduct() {
                   </button>
                 </a>
                 <Link to="/consult-product">
-                  {/* <button
+                  <button
                     type="button"
                     class="text-white bg-[#cd9621] hover:bg-[#b98514] focus:outline-none focus:ring-4 focus:ring-[#ffd780]  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-[#b98514] "
                   >
                     Consultar Produtos
-                  </button> */}
+                  </button>
                 </Link>
               </div>
             </div>
