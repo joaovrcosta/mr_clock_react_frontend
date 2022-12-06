@@ -17,6 +17,8 @@ export default function Header() {
     console.log(darkMode);
   };
 
+  const alberto = 0;
+
   return (
     // header
     <div className={`${darkMode}`}>
