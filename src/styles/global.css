@@ -2,10 +2,10 @@
 @import url("https://rsms.me/inter/inter.css");
 
 :root {
-    --accent: #fff;
-    --content: #fdff;
-    --background: #fff;
-    --foreground: #222;
+    --accent: rgb(41, 4, 4);
+    --content: rgb(92, 92, 92);
+    --background: rgb(168, 12, 12);
+    --foreground: rgb(27, 207, 183);
     --edge: #fff
 }
 
@@ -36,7 +36,7 @@ html {
 * {
   box-sizing: border-box;
   font-family: "Poppins";
-  color: #10162f;
+  color: #f0f3ff;
 }
 
 body {
