@@ -172,7 +172,7 @@ export function Home() {
                             <img src={star} className="w-5 h-5" alt="" />
                           </span>
                         </div>
-                        <div className="text-xs text-gray-500 ml-3 dark:text-white">
+                        <div className="text-xs text-red-500 ml-3 dark:text-white">
                           (150)
                         </div>
                       </div>
